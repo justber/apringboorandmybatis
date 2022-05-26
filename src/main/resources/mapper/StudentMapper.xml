@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace写的是对应接口的文件-->
+<mapper namespace="com.hc.apringboorandmybatis.mapper.StudentMaper">
+    <select id="selectStudent"  resultType="com.hc.apringboorandmybatis.entity.Student">
+        select * from testthyfle.student;
+    </select>
+
+    <insert id="addStudent" parameterType="com.hc.apringboorandmybatis.entity.Student">
+        insert into testthyfle.student(id, `name`) VALUES (#{id},#{name});
+    </insert>
+
+
+</mapper>
